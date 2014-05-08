@@ -22,10 +22,10 @@ with open(filename, 'r') as f:
       continue
 
     elif(line.startswith('root')):
-      root = line.partition('[')[-1].rpartition(']')[0].split(',')
+      data_root = line.partition('[')[-1].rpartition(']')[0].split(',')
 
     elif(line.startswith('tree')):
-      tree = line.partition('[')[-1].rpartition(']')[0].split(',')
+      data_tree = line.partition('[')[-1].rpartition(']')[0].split(',')
 
     else:
       print('Error: input file has incorrect syntax')
