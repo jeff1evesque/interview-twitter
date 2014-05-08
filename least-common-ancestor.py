@@ -30,11 +30,28 @@ with open(filename, 'r') as f:
     else:
       print('Error: input file has incorrect syntax')
 
+# create binary search tree (root, and immediate child nodes)
+#root = Node(data_root[0])
+print(type(data_root[0]))
+
+#tree = BinarySearchTree(root)
+
+for item in data_tree:
+  print type(item)
+  #tree.add(item)
+
 class Node:
+    """ A Node in the Binary Tree """
+    
+    """ Properties """
+    # the data to store
+    data = None
+    # left and right nodes
+    left = None
+    right = None
 
-  """ Constructor """
-  def __init__(self, d=None, l=None, r=None):
-    print('jeff')
-
-if __name__ == '__main__':
-  print('hi')
+    """ Constructor """
+    def __init__(self, d=None, l=None, r=None):
+        self.data = d
+        self.left = l
+        self.right = r
