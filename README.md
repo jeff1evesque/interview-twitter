@@ -20,7 +20,7 @@ tree.add(48)
 tree.add(25)
 tree.add(21)
 
-It must define each 'root', and 'tree' only once -- but, can define as many nodes we wish.  The above series of commands will generate a tree structure as follows:
+It must define each 'root', and 'tree' only once -- but, can define as many nodes (tree.add()) we wish.  The above series of commands will generate a tree structure as follows:
 
                  3
 
