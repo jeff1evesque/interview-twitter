@@ -20,8 +20,12 @@ with open(filename, 'r') as f:
   for line in f:
     if any(line.startswith(s) for s in ignore_type):
       continue
-    print(line, type(line))
-    exec(line)
+
+    elif(line.startswith('root')):
+      root = line.partition('[')[-1].rpartition(']')[0].split(',')
+
+    elif(line.startswith('tree')):
+      tree = line.partition('[')[-1].rpartition(']')[0].split(',')
 
 class Node:
 
