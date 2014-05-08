@@ -15,7 +15,7 @@ filename = 'input.txt'
 # ignore comment tuple (and new-line) from input file
 ignore_type = ("#", "//", "\n")
 
-# execute commands from input.py file
+# parse root, and tree values from input.py file
 with open(filename, 'r') as f:
   for line in f:
     if any(line.startswith(s) for s in ignore_type):
