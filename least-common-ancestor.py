@@ -10,17 +10,24 @@ prompts users for two nodes in order to determine a least common ancestor.
 '''
 
 # location of input file
-filename = 'input.py'
+filename = 'input.txt'
 
-# comment tuple (and new-line) from input file
+# ignore comment tuple (and new-line) from input file
 ignore_type = ("#", "//", "\n")
 
-# read data from input.py file
+# execute commands from input.py file
 with open(filename, 'r') as f:
   for line in f:
     if any(line.startswith(s) for s in ignore_type):
       continue
-    print(line)
+    print(line, type(line))
+    exec(line)
+
+class Node:
+
+  """ Constructor """
+  def __init__(self, d=None, l=None, r=None):
+    print('jeff')
 
 if __name__ == '__main__':
   print('hi')
