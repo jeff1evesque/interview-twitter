@@ -15,7 +15,7 @@ filename = 'input.txt'
 # ignore comment tuple (and new-line) from input file
 ignore_type = ("#", "//", "\n")
 
-# cast input values
+# cast input values from input file
 cast_type = float
 
 # parse root, and tree values from input.py file
