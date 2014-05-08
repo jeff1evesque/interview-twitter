@@ -1,0 +1,4 @@
+# input.py file is used to generate the binary tree, refer to the readme.md file
+
+root = [7]
+tree = [23, 1, 14, 53, 22]
