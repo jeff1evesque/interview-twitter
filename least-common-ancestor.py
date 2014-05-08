@@ -27,6 +27,9 @@ with open(filename, 'r') as f:
     elif(line.startswith('tree')):
       tree = line.partition('[')[-1].rpartition(']')[0].split(',')
 
+    else:
+      print('Error: input file has incorrect syntax')
+
 class Node:
 
   """ Constructor """
