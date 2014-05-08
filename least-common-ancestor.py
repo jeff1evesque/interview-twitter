@@ -15,6 +15,9 @@ filename = 'input.txt'
 # ignore comment tuple (and new-line) from input file
 ignore_type = ("#", "//", "\n")
 
+# cast input values
+cast_type = float
+
 # parse root, and tree values from input.py file
 with open(filename, 'r') as f:
   for line in f:
@@ -31,14 +34,14 @@ with open(filename, 'r') as f:
       print('Error: input file has incorrect syntax')
 
 # create binary search tree (root, and immediate child nodes)
-#root = Node(data_root[0])
-print(type(data_root[0]))
+#root = Node(cast_type(data_root[0]))
+print(type(cast_type(data_root[0])))
 
 #tree = BinarySearchTree(root)
 
 for item in data_tree:
-  print type(item)
-  #tree.add(item)
+  print type(cast_type(item))
+  #tree.add(cast_type(item))
 
 class Node:
     """ A Node in the Binary Tree """
