@@ -1,4 +1,5 @@
 #!/usr/bin/python
+
 '''
 least-common-ancestor.py
 
@@ -8,6 +9,9 @@ Jeffrey Levesque
 Receives input data from input.py in order to generate a binary tree.  Then,
 prompts users for two nodes in order to determine a least common ancestor.
 '''
+
+# import class definitions
+import class_definitions
 
 # location of input file
 filename = 'input.txt'
@@ -34,7 +38,7 @@ with open(filename, 'r') as f:
       print('Error: input file has incorrect syntax')
 
 # create binary search tree (root, and immediate child nodes)
-#root = Node(cast_type(data_root[0]))
+root = class_definitions.Node(cast_type(data_root[0]))
 print(type(cast_type(data_root[0])))
 
 #tree = BinarySearchTree(root)
@@ -42,19 +46,3 @@ print(type(cast_type(data_root[0])))
 for item in data_tree:
   print type(cast_type(item))
   #tree.add(cast_type(item))
-
-class Node:
-    """ A Node in the Binary Tree """
-    
-    """ Properties """
-    # the data to store
-    data = None
-    # left and right nodes
-    left = None
-    right = None
-
-    """ Constructor """
-    def __init__(self, d=None, l=None, r=None):
-        self.data = d
-        self.left = l
-        self.right = r
