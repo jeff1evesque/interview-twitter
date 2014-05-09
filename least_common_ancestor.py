@@ -39,10 +39,9 @@ with open(filename, 'r') as f:
 
 # create binary search tree (root, and immediate child nodes)
 root = class_definitions.Node(cast_type(data_root[0]))
-print(type(cast_type(data_root[0])))
-
-#tree = BinarySearchTree(root)
 
 for item in data_tree:
-  print type(cast_type(item))
-  #tree.add(cast_type(item))
+  root.insert(cast_type(item))
+
+# print binary search tree
+root.print_tree_breadth()
