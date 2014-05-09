@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 '''
-least-common-ancestor.py
+least_common_ancestor.py
 
 Jeffrey Levesque
 05/08/2014
