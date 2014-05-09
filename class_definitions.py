@@ -53,22 +53,22 @@ class Node:
     if self.right:
       self.right.print_tree_breadth()
 
-    def lca_algorithm(self, value1, value2):
-      node = root
-      ancestor = node
+  def lca_algorithm(self, value1, value2):
+    node = root
+    ancestor = node
 
-      while node != None:
-        if value1 < node.data and value2 > node.data:
-          ancestor = node
-          break
-        elif value1 == node.data or value2 == node.data:
-          break
-        elif value1 < node.data and value2 < node.data:
-          ancestor = node
-          node = node.left
-        elif value1 > node.data and value2 > node.data:
-          ancestor = node
-          node = node.right
+    while node != None:
+      if value1 < node.data and value2 > node.data:
+        ancestor = node
+        break
+      elif value1 == node.data or value2 == node.data:
+        break
+      elif value1 < node.data and value2 < node.data:
+        ancestor = node
+        node = node.left
+      elif value1 > node.data and value2 > node.data:
+        ancestor = node
+        node = node.right
 
-        # root node is empty
-        return ancestor
+      # root node is empty
+      return ancestor
