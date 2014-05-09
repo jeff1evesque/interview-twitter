@@ -54,6 +54,10 @@ class Node:
       self.right.print_tree_breadth()
 
   def lca_algorithm(self, value1, value2):
+    """
+    Given two nodes, determine the least common ancestor
+    """
+
     node = root
     ancestor = node
 
