@@ -42,4 +42,13 @@ class Node:
       else:
         self.right.insert(data)
 
-  
+  def print_tree_breadth(self):
+    """
+    Print tree using breadth-first recursion
+    """
+
+    if self.left:
+      self.left.print_tree_breadth()
+    elif self.right:
+      self.right.print_tree()
+    print self.data
