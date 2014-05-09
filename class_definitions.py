@@ -9,35 +9,37 @@ least-common-ancester.py file.
 '''
 
 class Node:
-    """ 
-    Tree Node: contains three attributes left node, right node, and data
+  """ 
+  Tree Node: contains three attributes left node, right node, and data
+  """
+
+  left = None
+  right = None
+  data = None
+
+  def __init__(self, d=None, l=None, r=None):
+    """
+    Constructor
     """
 
-    left = None
-    right = None
-    data = None
+    self.left = l
+    self.right = r
+    self.data = d
 
-    def __init__(self, d=None, l=None, r=None):
-      """
-      Constructor
-      """
+  def insert(self, data):
+    """
+    Insert new node with data into tree
+    """
 
-      self.left = l
-      self.right = r
-      self.data = d
-
-    def insert(self, data):
-      """
-      Insert new node with data into tree
-      """
-
-      if data < self.data:
-        if self.left is None:
-          self.left = Node(data)
-        else:
-          self.left.insert(data)
+    if data < self.data:
+      if self.left is None:
+        self.left = Node(data)
       else:
-        if self.right is None:
-          self.right = Node(data)
-        else:
-          self.right.insert(data)
+        self.left.insert(data)
+    else:
+      if self.right is None:
+        self.right = Node(data)
+      else:
+        self.right.insert(data)
+
+  
