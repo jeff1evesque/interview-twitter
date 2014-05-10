@@ -32,26 +32,33 @@ if sys.version_info >= (3,0,0):
 else:
   prompt_input_type = raw_input('Would you like to enter values?')
 
-# parse root, and tree values from input.py file
-with open(filename, 'r') as f:
-  for line in f:
-    if any(line.startswith(s) for s in ignore_type):
-      continue
+if prompt_input_type in definitions_variable.possible_yes:
+  print('add logic component here')
 
-    elif(line.startswith('root')):
-      data_root = line.partition('[')[-1].rpartition(']')[0].split(',')
+# parse root, and tree values from filename source
+elif prompt_input_type in definitions_variable.possible_no:
+  with open(filename, 'r') as f:
+    for line in f:
+      if any(line.startswith(s) for s in ignore_type):
+        continue
 
-    elif(line.startswith('tree')):
-      data_tree = line.partition('[')[-1].rpartition(']')[0].split(',')
+      elif(line.startswith('root')):
+        data_root = line.partition('[')[-1].rpartition(']')[0].split(',')
 
-    elif(line.startswith('lca')):
-      data_lca = line.partition('[')[-1].rpartition(']')[0].split(',')
+      elif(line.startswith('tree')):
+        data_tree = line.partition('[')[-1].rpartition(']')[0].split(',')
 
-    else:
-      print('Error: input file has incorrect syntax')
+      elif(line.startswith('lca')):
+        data_lca = line.partition('[')[-1].rpartition(']')[0].split(',')
+
+      else:
+        print('Error: input file has incorrect syntax')
+
+else:
+  print('Not a valid input.  Please enter \'yes\', or \'no\'')
 
 # create binary search tree (root, and immediate child nodes)
-root = class_definitions.Node(cast_type(data_root[0]))
+root = definitions_class.Node(cast_type(data_root[0]))
 
 for item in data_tree:
   root.insert(cast_type(item))
