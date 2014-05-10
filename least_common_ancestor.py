@@ -33,6 +33,8 @@ else:
   prompt_input_type = raw_input('Would you like to enter values?')
 
 if prompt_input_type in definitions_variable.possible_yes:
+  data_tree = []
+
   while True:
     if sys.version_info >= (3,0,0):
       tree_value = input('Enter tree value (q - to quit): ')
