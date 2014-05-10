@@ -61,8 +61,6 @@ class Node:
     node = root
     ancestor = node
 
-    #print('hi', node.data)
-
     while node != None:
       if value1 < node.data and value2 > node.data:
         ancestor = node
