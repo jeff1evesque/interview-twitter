@@ -48,7 +48,7 @@ for item in data_tree:
 
 # return least common ancestor
 lca = root.lca_algorithm(cast_type(data_lca[0]), cast_type(data_lca[1]), root)
-print(lca)
+print('least common ancestor: ', lca.data)
 
 # print binary search tree
 root.print_tree_breadth()
