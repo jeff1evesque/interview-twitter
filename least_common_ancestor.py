@@ -34,6 +34,9 @@ with open(filename, 'r') as f:
     elif(line.startswith('tree')):
       data_tree = line.partition('[')[-1].rpartition(']')[0].split(',')
 
+    elif(line.startswith('lca')):
+      data_lca = line.partition('[')[-1].rpartition(']')[0].split(',')
+
     else:
       print('Error: input file has incorrect syntax')
 
@@ -42,6 +45,10 @@ root = class_definitions.Node(cast_type(data_root[0]))
 
 for item in data_tree:
   root.insert(cast_type(item))
+
+# return least common ancestor
+lca = root.lca_algorithm(cast_type(data_lca[0]), cast_type(data_lca[1]), root)
+print('least common ancestor: ', lca.data)
 
 # print binary search tree
 root.print_tree_breadth()

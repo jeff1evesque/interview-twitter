@@ -52,3 +52,27 @@ class Node:
     print self.data
     if self.right:
       self.right.print_tree_breadth()
+
+  def lca_algorithm(self, value1, value2, root):
+    """
+    Given two nodes, determine the least common ancestor
+    """
+
+    node = root
+    ancestor = node
+
+    while node != None:
+      if value1 < node.data and value2 > node.data:
+        ancestor = node
+        break
+      elif value1 == node.data or value2 == node.data:
+        break
+      elif value1 < node.data and value2 < node.data:
+        ancestor = node.data
+        node = node.left
+      elif value1 > node.data and value2 > node.data:
+        ancestor = node.data
+        node = node.right
+
+    # root node is empty
+    return ancestor
