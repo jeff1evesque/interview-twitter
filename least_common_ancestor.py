@@ -10,8 +10,9 @@ Receives input data from input.py in order to generate a binary tree.  Then,
 prompts users for two nodes in order to determine a least common ancestor.
 '''
 
-# import class definitions
-import class_definitions
+# import class and variable definitions
+import definitions_class
+import definitions_variable
 
 # import general python classes
 import sys
