@@ -33,7 +33,16 @@ else:
   prompt_input_type = raw_input('Would you like to enter values?')
 
 if prompt_input_type in definitions_variable.possible_yes:
-  print('add logic component here')
+  while True:
+    if sys.version_info >= (3,0,0):
+      tree_value = input('Enter tree value (q - to quit): ')
+    else:
+      tree_value = raw_input('Enter tree value (q - to quit): ')
+
+    if tree_value in definitions_variable.possible_quit:
+      break
+    else:
+      data_tree.append(tree_value)
 
 # parse root, and tree values from filename source
 elif prompt_input_type in definitions_variable.possible_no:
