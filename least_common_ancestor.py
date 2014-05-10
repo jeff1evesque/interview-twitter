@@ -26,7 +26,7 @@ ignore_type = ("#", "//", "\n")
 cast_type = float
 
 # prompt user for value or parse filename
-if sys.version_info>=(3,0,0):
+if sys.version_info >= (3,0,0):
   prompt_input_type = input('Would you like to enter values?')
 else:
   prompt_input_type = raw_input('Would you like to enter values?')
