@@ -13,6 +13,9 @@ prompts users for two nodes in order to determine a least common ancestor.
 # import class definitions
 import class_definitions
 
+# import general python classes
+import sys
+
 # location of input file
 filename = 'input.txt'
 
@@ -21,6 +24,12 @@ ignore_type = ("#", "//", "\n")
 
 # cast input values from input file
 cast_type = float
+
+# prompt user for value or parse filename
+if sys.version_info>=(3,0,0):
+  prompt_input_type = input('Would you like to enter values?')
+else:
+  prompt_input_type = raw_input('Would you like to enter values?')
 
 # parse root, and tree values from input.py file
 with open(filename, 'r') as f:
