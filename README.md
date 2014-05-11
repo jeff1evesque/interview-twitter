@@ -1,13 +1,21 @@
-Least Common Ancestor, written in Python
+least-common-child
 =====================
 
 I had an interactive interview with Twitter, and was given 15 minutes to write-up something that determined the least-common-ancestor for a binary search tree.  I am adjusting what I did for them -- but, feel free to use or improve what I have.
 
 ##Least Common Ancestor, written in Python
 
+###Definition:
+
+Suppose we tet T be a rooted tree with n nodes. The lowest common ancestor between two nodes v and w is defined as the lowest node in T that has both v and w as descendants.
+
+- http://en.wikipedia.org/wiki/Lowest_common_ancestor
+
+###Overview:
+
 This application will prompt users whether they want to input values interactively, or use default file to import values.  The default import file is currently called `input.txt`.
 
-###Input file: 
+##Input file
 
 The values in the `input.txt` file must follow a special format:
 
@@ -19,7 +27,7 @@ lca = [14, 53]
 
 where `root` must be a list containing just one value (root of the binary search tree), `tree` an unordered list of values (remaining part of the binary search tree), and `lca` which must only contain two node values that is defined within the tree (either the root, or a tree node value).
 
-###Interactive input:
+##Interactive input:
 
 Note: when users elect to interactively input values, the first value inputted will be considered the root.  Thus, if users input the following:
 
