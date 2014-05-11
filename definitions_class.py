@@ -5,7 +5,7 @@ Jeffrey Levesque
 05/09/2014
 
 This file contains all the logic-component classes that get imported into the
-least-common-ancester.py file.
+least_common_ancester.py file.
 '''
 
 class Node:
