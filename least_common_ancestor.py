@@ -28,9 +28,9 @@ cast_type = float
 
 # prompt user for value or parse filename
 if sys.version_info >= (3,0,0):
-  prompt_input_type = input('Would you like to enter values?')
+  prompt_input_type = input('Would you like to enter values?\n')
 else:
-  prompt_input_type = raw_input('Would you like to enter values?')
+  prompt_input_type = raw_input('Would you like to enter values?\n')
 
 if prompt_input_type in definitions_variable.possible_yes:
   data_tree = []
