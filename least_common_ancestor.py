@@ -49,8 +49,6 @@ if prompt_input_type in definitions_variable.possible_yes:
   data_root = list(data_tree[0])
   data_tree = list(data_tree[1:])
 
-  root = definitions_class.Node(cast_type(data_root[0]))
-
   data_lca = []
 
   if sys.version_info >= (3,0,0):
