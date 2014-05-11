@@ -1,4 +1,4 @@
-least-common-child
+Least Common Ancestor
 =====================
 
 I had an interactive interview with Twitter, and was given 15 minutes to write-up something that determined the least-common-ancestor for a binary search tree.  I am adjusting what I did for them -- but, feel free to use or improve what I have.
