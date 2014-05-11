@@ -46,9 +46,8 @@ if prompt_input_type in definitions_variable.possible_yes:
     else:
       data_tree.append(tree_value)
 
-  data_root = list(data_tree[0])
-  data_tree = list(data_tree[1:])
-
+  data_root = data_tree[0]
+  data_tree = data_tree[1:]
   data_lca = []
 
   if sys.version_info >= (3,0,0):
@@ -86,9 +85,9 @@ root = definitions_class.Node(cast_type(data_root[0]))
 for item in data_tree:
   root.insert(cast_type(item))
 
+# print binary search tree
+root.print_tree_breadth()
+
 # return least common ancestor
 lca = root.lca_algorithm(cast_type(data_lca[0]), cast_type(data_lca[1]), root)
 print('least common ancestor: ', lca.data)
-
-# print binary search tree
-root.print_tree_breadth()
