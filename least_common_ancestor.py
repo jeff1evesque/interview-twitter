@@ -46,6 +46,9 @@ if prompt_input_type in definitions_variable.possible_yes:
     else:
       data_tree.append(tree_value)
 
+  data_root = list(data_tree[0])
+  data_tree = list(data_tree[1:])
+
 # parse root, and tree values from filename source
 elif prompt_input_type in definitions_variable.possible_no:
   with open(filename, 'r') as f:
