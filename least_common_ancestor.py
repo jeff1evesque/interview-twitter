@@ -89,5 +89,7 @@ for item in data_tree:
 root.print_tree_breadth()
 
 # return least common ancestor
-lca = root.lca_algorithm(cast_type(data_lca[0]), cast_type(data_lca[1]), root)
+data_lca = [cast_type(i) for i in data_lca]
+data_lca.sort()
+lca = root.lca_algorithm(data_lca[0], data_lca[1], root)
 print('least common ancestor: ', lca.data)
