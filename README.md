@@ -7,7 +7,7 @@ I had an interactive interview with Twitter, and was given 15 minutes to write-u
 
 ###Definition:
 
-Suppose we tet T be a rooted tree with n nodes. The lowest common ancestor between two nodes v and w is defined as the lowest node in T that has both v and w as descendants.
+Suppose we let T be a rooted tree with n nodes. The lowest common ancestor between two nodes v and w is defined as the lowest node in T that has both v and w as descendants.
 
 - http://en.wikipedia.org/wiki/Lowest_common_ancestor
 
