@@ -3,6 +3,8 @@ least-common-ancestor
 
 Least Common Ancestor, written in Python
 
+I had an interactive interview with Twitter, and was given 15 minutes to write-up something that determined the least-common-ancestor for a binary search tree.  I am adjusting what I did for them -- but, feel free to use or improve what I have.
+
 This application will prompt users whether they want to input values, or default to values defined in input.txt.  The values in the input.txt file must follow a special format:
 
 root = [7]
