@@ -49,6 +49,17 @@ if prompt_input_type in definitions_variable.possible_yes:
   data_root = list(data_tree[0])
   data_tree = list(data_tree[1:])
 
+  root = definitions_class.Node(cast_type(data_root[0]))
+
+  data_lca = []
+
+  if sys.version_info >= (3,0,0):
+    data_lca.append(input('Enter the first LCA node value: '))
+    data_lca.append(input('Enter the second LCA node value: '))
+  else:
+    data_lca.append(raw_input('Enter the first LCA node value: '))
+    data_lca.append(raw_input('Enter the second LCA node value: '))
+
 # parse root, and tree values from filename source
 elif prompt_input_type in definitions_variable.possible_no:
   with open(filename, 'r') as f:
