@@ -13,7 +13,7 @@ Suppose we let T be a rooted tree with n nodes. The lowest common ancestor betwe
 
 ###Overview:
 
-This application will prompt users whether they want to input values interactively, or use default file to import values.  The default import file is currently called `input.txt`.
+This application will prompt users whether they want to input values interactively, or use a default file to import values.  The default import file is currently called `input.txt`.
 
 ##Input file
 
